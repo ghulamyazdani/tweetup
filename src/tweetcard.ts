@@ -1,8 +1,8 @@
-export default function tweetcard(props: any) {
+export default function tweetcard(props: any, quote: any) {
   return `
         <svg
-        width="850" height="390"
-        viewBox="0 0 850 390"
+        width="800" height="350"
+        viewBox="0 0 800 350"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
             <rect xmlns="http://www.w3.org/2000/svg" data-testid="card_bg" id="cardBg"
@@ -21,9 +21,12 @@ export default function tweetcard(props: any) {
                 }
                 svg {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-                    background: pink;
+                    background: #fff;
                     border-radius: 5px;
-                    border: 5px solid blue;
+                    border: 5px solid #1DA1F2;
+                    text-align: center;
+                    margin: 0 auto;
+                    box-sizing: border-box;
                 
                 }
                 .tweet {
@@ -32,8 +35,20 @@ export default function tweetcard(props: any) {
                     max-width: 600px;
                 }
                 text{ 
-                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                    font-family:'Segoe UI', Ubuntu, Sans-Serif;
                     word-wrap: break-word;
+                }
+                .quote{
+                    text-align: center;
+                    font-size: 1.5rem;
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: normal;
+                }
+                .some{
+                    max-width: 300px;
+                    z-index: 100000;
                 }
             </style>
 
@@ -45,9 +60,9 @@ export default function tweetcard(props: any) {
           </defs>
           <use xlink:href="#rect" stroke-width="2" stroke="black"/>
           <image x="50" y='50' xlink:href="${props.data[0].profile_image_url}" width="80" height="80" clip-path="url(#clip)"/>
-          <text fill="#000000" font-family="Serif" font-size="60" id="svg_3" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(0.844199 0 0 0.844199 18.8536 10.0524)" x="240" xml:space="preserve" y="84.81544">${props.data[0].name}</text>
-  <text fill="#000000" font-family="Serif" font-size="24" id="svg_4" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 1 0 0) matrix(0.675158 0 0 0.675158 39.0932 40.2368)" x="240" xml:space="preserve" y="100.22637">@${props.data[0].username}</text>
-  <text fill="#000000"class="tweet" font-family="Serif" font-size="24" id="svg_5" stroke="#144a9b" stroke-width="0" text-anchor="middle" transform="matrix(0.879186 0 0 1 27.1473 20)" x="411.0082" xml:space="preserve" y="158">lorem isoaskd mslas ,salaselmam, aslmasasacscaasccccsascssacsmasmasksamsmasmmaseksmaskkas kasmaskmca asklacma askasc aksenv kasc</text>
- 
+          <text class="name" fill="#000000" font-size="24" id="svg_3" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(0.844199 0 0 0.844199 18.8536 10.0524)" x="260" xml:space="preserve" y="84.81544">${props.data[0].name}</text>
+  <text fill="#000000"  font-size="24" id="svg_4" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 1 0 0) matrix(0.675158 0 0 0.675158 39.0932 40.2368)" x="260" xml:space="preserve" y="95">@${props.data[0].username}</text>
+ <text class="quote" fill="#000000"class="tweet" width="100px" font-size="24" id="svg_5" stroke="#144a9b" stroke-width="0" text-anchor="middle" transform="matrix(0.879186 0 0 1 27.1473 20)" x="411.0082" xml:space="preserve" y="158">${quote.content}</text>           
+  
     </svg>`;
 }

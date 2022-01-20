@@ -35,5 +35,11 @@
   </defs>
   <use xlink:href="#rect" stroke-width="2" stroke="black"/>
   <image x="40" y='10' xlink:href="${props.}" width="80" height="80" clip-path="url(#clip)"/>
-            
+  <foreignObject width="100" height="50"
+                   requiredExtensions="http://example.com/SVGExtensions/EmbeddedXHTML">
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <div class="some">Here is a paragraph that requires word wrap Lorem ipsum dolor sit amet</div>
+      </body>
+    </foreignObject>
+ <text class="quote" fill="#000000"class="tweet"  font-size="24" id="svg_5" stroke="#144a9b" stroke-width="0" text-anchor="middle" transform="matrix(0.879186 0 0 1 27.1473 20)" x="411.0082" xml:space="preserve" y="158">lorem ipsum dolor sit amet, consectetur adipiscing lorem ipsum dolor sit amet, consectetur adipiscing </text>           
     </svg>

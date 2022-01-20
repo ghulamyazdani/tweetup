@@ -15,3 +15,13 @@ export const fetch = async (props: any) => {
   console.log(response);
   return response;
 };
+
+export const quotefetch = async () => {
+  const config = {
+    method: "get",
+    url: `https://api.quotable.io/random`,
+  };
+
+  const resp = await axios(config as any);
+  return resp.data;
+};
