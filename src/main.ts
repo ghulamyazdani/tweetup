@@ -17,5 +17,5 @@ app.get("/tweet", async (req: Request, res: Response) => {
   res.send(await tweet(req.query));
 });
 app.listen(port, () => {
-  console.log(`listening on http://${process.env.HOST}:${port}/`);
+  console.log(`listening on `);
 });
