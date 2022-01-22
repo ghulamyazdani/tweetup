@@ -12,7 +12,6 @@ export const fetch = async (props: any) => {
   };
 
   const { data: response } = await axios(config as any);
-  console.log(response);
   return response;
 };
 
