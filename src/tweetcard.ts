@@ -23,20 +23,11 @@ export default function tweetcard(props: any, quote: any) {
                 body {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
                 }
-                .header {
-                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-                    text-align: center;
-                    margin-top: 20px;
-                    color: #fff;
-                }
                 svg {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
                     background: #fff;
                     border-radius: 5px;
                     border: 5px solid #1DA1F2;
-                    text-align: center;
-                    margin: 0 auto;
-                    box-sizing: border-box;
                 }
             </style>
           <defs>
