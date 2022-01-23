@@ -1,6 +1,6 @@
 import { text } from "express";
 
-export default function tweetcard(props: any, quote: any) {
+export default async function tweetcard(props: any, quote: any) {
   const quoted = quote.content.split(" ");
   var text1: any = [];
   var text2: any = [];
@@ -12,6 +12,8 @@ export default function tweetcard(props: any, quote: any) {
       text2.push(quoted[i]);
     }
   }
+
+  const pic = await props.data[0].profile_image_url;
 
   return `
         <svg
@@ -37,9 +39,7 @@ export default function tweetcard(props: any, quote: any) {
             </clipPath>
           </defs>
           <use xlink:href="#rect" stroke-width="2" stroke="black"/>
-          <image x="50" y="50" xlink:href="${
-            props.data[0].profile_image_url
-          }" width="80" height="80" clip-path="url(#clip)"/>
+          <image x="50" y="50" xlink:href="${pic}" width="80" height="80" clip-path="url(#clip)"/>
           <text class="name" fill="#000000" font-size="24" id="svg_3" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(0.844199 0 0 0.844199 18.8536 10.0524)" x="260" xml:space="preserve" y="84.81544">${
             props.data[0].name
           }</text>
