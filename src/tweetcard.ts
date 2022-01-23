@@ -15,8 +15,8 @@ export default function tweetcard(props: any, quote: any) {
 
   return `
         <svg
-        width="800" height="350"
-        viewBox="0 0 800 350"
+        width="700" height="275"
+        viewBox="0 0 700 275"
         fill="none"
         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <style>
