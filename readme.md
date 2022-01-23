@@ -1,4 +1,4 @@
-[![Banner](https://tweerup.herokuapp.com/tweet?username=iamyazreza)](https://github.com/ghulamyazdani/tweetup)
+[![Banner](https://github.com/ghulamyazdani/tweetup/blob/master/Assets/poster.png)](https://github.com/ghulamyazdani/tweetup)
 
 <div align="center">
 <a href="https://github.com/ghulamyazdani/tweetup"><img alt="Opensource" title="Website" src="https://badges.frapsoft.com/os/v2/open-source.svg?v=103"/></a>
